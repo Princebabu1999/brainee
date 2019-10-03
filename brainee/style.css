@@ -1,0 +1,36 @@
+body{
+    background:black;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    color:white;
+    margin-top:25px;
+}
+img{
+    width:150px;
+    height:150px;
+}
+.image-container{
+    width:70%;
+    margin:20px auto;
+}
+button{
+    margin:20px 5px;
+}
+.btncustom{
+    background: black;
+    border:1px solid white;
+    color:#949090;
+}
+input{
+    width:400px;
+    font-size:1.2em;
+    background:none;
+    border:1px solid white;
+    border-radius:5px;
+    margin-bottom: 5px;
+    color:white;
+    text-align:center;
+    outline:none;
+}

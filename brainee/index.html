@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Brainee</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Find the movie name</h1>
+        <div class="d-flex justify-content-around image-container">
+            <img class="img-thumbnail" src="images/noimg.png" alt="no symbol">
+            <img class="img-thumbnail" src="images/time.jpg" alt="sand clock">
+            <img class="img-thumbnail" src="images/die.jpg" alt="dead skull">
+        </div>
+            <input type="text" id="input" autocomplete="off"><br>
+            <button id="btn1" class="btn btn-success">Check</button>
+            <button id="btn2" class=" btn btncustom">Try again</button>    
+        <div class="comments d-flex justify-content-around">
+            <p class="d-inline text-success display-3" id="first"></p>
+            <p class="d-inline text-danger display-3" id="second"></p>
+        </div>
+    </div>
+    <script>
+        var input=document.getElementById('input');
+        var btn1=document.getElementById('btn1');
+        var pc=document.getElementById('first');
+        var pw=document.getElementById('second');
+        btn1.addEventListener('click',()=>{
+            if(input.value === "no time to die"){
+                pc.textContent='Correct!!'; 
+                pw.textContent='';   
+            }
+            else if(input.value == ''){
+                alert('Enter an input');
+            }
+            else{
+                pw.textContent='Wrong!!';
+                pc.textContent='';
+            }
+        })
+        var btn2=document.getElementById('btn2')
+        btn2.addEventListener('click',()=>{
+            input.value="";
+            pc.textContent='';
+            pw.textContent='';
+        })
+    </script>
+</body>
+</html>
